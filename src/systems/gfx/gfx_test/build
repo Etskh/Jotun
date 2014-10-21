@@ -1,5 +1,0 @@
-#    !/bin/sh
-#
-clang -ogfx_test.exe -std=c++0x -lstdc++ gfx_test.cpp ../Material.cpp ../MaterialContext.cpp ../Mesh.cpp ../MeshContext.cpp ../Parameter.cpp ../Shader.cpp ../Texture.cpp ../scene/SceneNode.cpp ../scene/Scene.cpp ../scene/BasicScene.cpp ../scene/CameraNode.cpp ../scene/StaticMeshNode.cpp
-
-
