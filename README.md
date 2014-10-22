@@ -12,7 +12,7 @@ scons
 ```
 scons -Q -j4 target=debug
 ```
-That will build it lightening fast - and only the debug. To run it, right now, you need to invoke the run manually.
+That will build it lightening fast - and only the debug. To run it, right now, you need to invoke the run manually. Hopefully it won't be the case for <a target="_blank" href="https://github.com/Etskh/Jotun/issues/2">the future</a>.
 
 
 ##Systems
