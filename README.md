@@ -11,7 +11,7 @@ Gfx
 ===
 The Gfx system needs a `Device::Handle` to initialize. It's the window, effectively. Some work will need to go into making it less dependant on the physical window, and more on the graphics device. So if a designer wants a secondary window, it wouldn't need a whole new openGL context (and the resources could be shared).
 
-The Gfx is simply an interface for Scenes which then in turn, create SceneNodes. These scene-nodes are filled up and maintained by the driver code - and managed by the SceneGraph. The drivers ask for their own Mesh::Handles and Material::Handles through the Mesh and Material interfaces. The sceneNodes take these and create MeshContext::Handles and MaterialContext::Handles - and these are what the graphics loop will manage and iterate over.
+The Gfx is simply an interface for Scenes which then in turn, create SceneNodes. These scene-nodes are filled up and maintained by the driver code - and managed by the SceneGraph. The drivers ask for their own `Mesh::Handle`s and `Material::Handle`s through the Mesh and Material interfaces. The sceneNodes take these and create `MeshContext::Handle`s and `MaterialContext::Handle`s - and these are what the graphics loop will manage and iterate over.
 
 
 GUI
