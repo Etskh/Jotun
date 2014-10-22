@@ -16,6 +16,9 @@
 #define OUT 
 typedef unsigned int uint;
 namespace math {
+	struct Vector2 {
+		float m[2];
+	};
 	struct Vector3 {
 		float m[3];
 	};

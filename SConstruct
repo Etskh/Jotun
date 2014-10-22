@@ -9,13 +9,16 @@ import fnmatch
 
 class JotunBuild:
 
+	libs = [
+		'stdc++',
+		#'SDL2'
+	]
+
 	def __init__(self, name):
 		self.name = name
 		self.env = Environment(CC='clang', CXX='clang', LINK='clang')
 		self.env.Append(CPPFLAGS=['-std=c++0x','-Werror','-Wall'])
-		self.env.Append(LIBS=['stdc++'])
-		# SDL
-		# self.env.Append(LIBS=['SDL2'])
+		self.env.Append(LIBS=self.libs)
 		self.objs = []
 		
 	def getBuildPath(self):
@@ -56,8 +59,8 @@ class DebugBuild(JotunBuild):
 class ProfileBuild(JotunBuild):
 	def __init__(self):
 		JotunBuild.__init__(self,'profile')
-		self.env.Append(CPPFLAGS=['-g'])
-		self.env.Append(CPPFLAGS=['-O3'])
+		self.env.Append(CPPFLAGS=['-g', '-O3'])
+		self.env.Append(CPPDEFINES=['DEBUG'])
 
 class ReleaseBuild(JotunBuild):
 	def __init__(self):
