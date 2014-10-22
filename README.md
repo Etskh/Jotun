@@ -3,6 +3,18 @@ Jotun
 
 A redux of a module-based framework that compiles on Linux ( tested on Ubuntu ), and MacOSX (tested on Mountain Lion), and probably Windows ( untested, but I'm a Windows programmer, so it's a good guess). Plans to support mobile aren't being developed, but isn't not on my mind.
 
+##Building
+For just testing the framework, I've not bothered to make the executable a different project (yet) so everything just builds into an executable in one step. It uses the SCons build tool - but just one file, and to compensate for not having SConscript files scattered through the source, there is a lot of python (relatively) in the SConstruct file. A simple build can obviouly be invoked by:
+```
+scons
+```
+...but that will build everything. Terrible. I've made three types of builds: `debug` which has debug symbols, the DEBUG define, and no optimisation; `profile` which is a more lean version of the debug build; and `release` which does heavy code optimisation and strips unneeded symbols. Each build can be invoked by adding `target=[build]` to the end of the scons command, where build is one of: debug, profile, or release. We can also add all the scons flags we want.
+```
+scons -Q -j4 target=debug
+```
+That will build it lightening fast - and only the debug. To run it, right now, you need to invoke the run manually.
+
+
 ##Systems
 The main driving agent of the modules is the systems. Each system is created for a specific Application class. Every application can only have one system per type of system.
 
