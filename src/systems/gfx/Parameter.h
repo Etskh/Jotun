@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "core/math/Vector.h"
+#include "core/Colour.h"
+
 ////////////////////////////////////////////////////////////////////
 //
 // Parameter.h
@@ -60,9 +63,9 @@ private:
 		//
 		bool			MakeActive			( void );
 		bool			SetValue			( float value );
-		bool			SetValue			( math::Vector3& vector );
+		bool			SetValue			( core::Vector3& vector );
 		bool			SetValue			( core::Colour& colour );
-		bool			SetValue			( math::Matrix4& matrix );
+		bool			SetValue			( core::Matrix4& matrix );
 		bool			SetValue			( Texture::Handle texture );
 		
 	public:

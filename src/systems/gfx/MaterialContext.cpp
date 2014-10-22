@@ -12,7 +12,7 @@ Material::Handle	MaterialContext::material			( void )
 }
 
 
-bool		MaterialContext::SetProjectionMatrix	( math::Matrix4& matrix )
+bool		MaterialContext::SetProjectionMatrix	( core::Matrix4& matrix )
 {
 	// Set the parameter, based on the shaders in the material
 	// to the right parameter name
@@ -25,7 +25,7 @@ bool		MaterialContext::SetProjectionMatrix	( math::Matrix4& matrix )
 	return false;
 }
 
-bool		MaterialContext::SetWorldViewMatrix	( math::Matrix4& matrix )
+bool		MaterialContext::SetWorldViewMatrix	( core::Matrix4& matrix )
 {
 	// Set the parameter, based on the shaders in the material
 	// to the right parameter name
@@ -43,7 +43,7 @@ bool		MaterialContext::SetValue			( const char* valName, float value )
 {
 	return false;
 }
-bool		MaterialContext::SetValue			( const char* valName, math::Vector3& vector )
+bool		MaterialContext::SetValue			( const char* valName, core::Vector3& vector )
 {
 	return false;
 }
@@ -51,7 +51,7 @@ bool		MaterialContext::SetValue			( const char* valName, core::Colour& colour )
 {
 	return false;
 }
-bool		MaterialContext::SetValue			( const char* valName, math::Matrix4& matrix )
+bool		MaterialContext::SetValue			( const char* valName, core::Matrix4& matrix )
 {
 	//
 	// TODO - replace strcmp with hash

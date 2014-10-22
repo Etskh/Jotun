@@ -13,7 +13,7 @@ Parameter::HInstance	Parameter::CreateInstance		( void )
 }
 
 
-Parameter::Parameter			( void )
+Parameter::Parameter						( void )
 	: _name ( "Invalid-Parameter" )
 	, _type ( Invalid )
 	, _purpose ( None )
@@ -21,7 +21,7 @@ Parameter::Parameter			( void )
 
 }
 
-Parameter::Parameter				( const char* name, Type type, Purpose purpose )
+Parameter::Parameter						( const char* name, Type type, Purpose purpose )
 	: _name ( name )
 	, _type ( type )
 	, _purpose ( purpose )
@@ -29,31 +29,31 @@ Parameter::Parameter				( const char* name, Type type, Purpose purpose )
 	// empty
 }
 
-Parameter::~Parameter				( void )
+Parameter::~Parameter						( void )
 {
 	// empty
 }
 
 
-const char*			Parameter::name		( void ) const
+const char*			Parameter::name			( void ) const
 {
 	return _name.c_str();
 }
 
 
-Parameter::Type		Parameter::type		( void ) const
+Parameter::Type		Parameter::type			( void ) const
 {
 	return _type;
 }
 
 
-uint				Parameter::size		( void ) const
+uint				Parameter::size			( void ) const
 {
 	return _size;
 }
 
 
-Parameter::Purpose	Parameter::purpose	( void ) const
+Parameter::Purpose	Parameter::purpose		( void ) const
 {
 	return _purpose;
 }
@@ -61,12 +61,12 @@ Parameter::Purpose	Parameter::purpose	( void ) const
 
 
 
-bool	Parameter::Instance::MakeActive			( void )
+bool	Parameter::Instance::MakeActive		( void )
 {
 	return false;
 }
 
-bool	Parameter::Instance::SetValue			( float value )
+bool	Parameter::Instance::SetValue		( float value )
 {
 	if( _host->type() != Parameter::Float ) {
 		return _data != NULL;
@@ -74,45 +74,45 @@ bool	Parameter::Instance::SetValue			( float value )
 	return false;
 }
 
-bool	Parameter::Instance::SetValue			( math::Vector3& vector )
+bool	Parameter::Instance::SetValue		( core::Vector3& vector )
 {
 	return false;
 }
 
-bool	Parameter::Instance::SetValue			( core::Colour& colour )
+bool	Parameter::Instance::SetValue		( core::Colour& colour )
 {
 	return false;
 }
 
-bool	Parameter::Instance::SetValue			( math::Matrix4& matrix )
+bool	Parameter::Instance::SetValue		( core::Matrix4& matrix )
 {
 	printf("\n\nHOMg! Setting a matrix to be the thing!\n\n");
 	return false;
 }
 
-bool	Parameter::Instance::SetValue			( Texture::Handle texture )
+bool	Parameter::Instance::SetValue		( Texture::Handle texture )
 {
 	return false;
 }
 
-const char*	Parameter::Instance::name				( void ) const
+const char*	Parameter::Instance::name		( void ) const
 {
 	ASSERT( _host != NULL );
 	return _host->name();
 }
 
-const Parameter* Parameter::Instance::host			( void ) const
+const Parameter* Parameter::Instance::host	( void ) const
 {
 	ASSERT( _host != NULL );
 	return _host;
 }
 
-Parameter::Instance::~Instance			( void )
+Parameter::Instance::~Instance				( void )
 {
 	// empty
 }
 
-Parameter::Instance::Instance			( const Parameter* host )
+Parameter::Instance::Instance				( const Parameter* host )
 	: _host( host )
 	, _data( NULL )
 {

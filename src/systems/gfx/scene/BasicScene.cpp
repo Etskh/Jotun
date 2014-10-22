@@ -28,8 +28,8 @@ bool				BasicScene::Render				( CameraNode::Handle camera )
 {
 	printf(" using %s\n", camera->name() );
 	
-	math::Matrix4	proj;
-	math::Matrix4	view;
+	core::Matrix4	proj;
+	core::Matrix4	view;
 	Renderable		renderable;
 	
 	camera->GetProjectionMatrix( &proj );

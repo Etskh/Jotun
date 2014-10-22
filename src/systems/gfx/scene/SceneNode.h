@@ -20,8 +20,8 @@ public:
 	typedef std::shared_ptr<SceneNode> Handle; // TODO - change this to: typedef SmrtPtr<Mesh> Handle;
 	
 public:
-	void					Transform		( const math::Matrix4* mat ) const;
-	void					Transform		( math::Matrix4* mat );
+	void					Transform		( const core::Matrix4* mat ) const;
+	void					Transform		( core::Matrix4* mat );
 	virtual					~SceneNode		( void );
 	const char*				name			( void ) const;
 	const char*				name			( const char* pName );
@@ -33,6 +33,6 @@ protected:
 
 private:
 	std::string				_name;
-	math::Matrix4			_transform;
+	core::Matrix4			_transform;
 };
 

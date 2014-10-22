@@ -66,10 +66,10 @@ private:
 
 	std::vector<Surface>		_surfaces;
 
-	std::vector<math::Vector3>	_pos;
-	std::vector<math::Vector3>	_norm;
+	std::vector<core::Vector3>	_pos;
+	std::vector<core::Vector3>	_norm;
 	std::vector<core::Colour>	_colour;
 	//std::vector<Weight>		_weight;
-	std::vector<math::Vector2>	_uv;
+	std::vector<core::Vector2>	_uv;
 };
 

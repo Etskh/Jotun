@@ -63,7 +63,13 @@ bool		Mesh::HasUV				( void ) const
 
 uint		Mesh::GetVertexType		( void ) const
 {
-	return false;
+	if( _locked ) {
+		return 0;
+	}
+	if( _modified ) {
+		return 0;
+	}
+	return 1;
 }
 	
 uint		Mesh::surfaceCount		( void ) const

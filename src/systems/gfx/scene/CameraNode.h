@@ -1,5 +1,6 @@
 #pragma once
 
+#include "core/Patterns.h"
 
 ////////////////////////////////////////////////////////////////////
 //
@@ -15,10 +16,10 @@ public:
 	friend class Scene;
 	
 public:
-	bool					GetProjectionMatrix	( OUT math::Matrix4* matrix ) const;
-	bool					GetWorldViewMatrix	( OUT math::Matrix4* matrix ) const;
+	bool					GetProjectionMatrix	( OUT core::Matrix4* matrix ) const;
+	bool					GetWorldViewMatrix	( OUT core::Matrix4* matrix ) const;
 
-	bool					LookAt				( math::Vector3& where );
+	bool					LookAt				( core::Vector3& where );
 	virtual					~CameraNode			( void );
 
 private:

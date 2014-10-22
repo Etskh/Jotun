@@ -14,7 +14,7 @@ Texture::Handle	Texture::CreateEmpty			( const char* name )
 
 Texture::Handle	Texture::CreateFromData		( const char* name, const char* pData, uint nsize )
 {
-	ASSERT( NOT_IMPLEMENTED );
+	ASSERT( false );
 	
 	return Texture::Handle( NULL );
 }

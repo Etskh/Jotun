@@ -9,18 +9,18 @@
 
 
 
-bool		CameraNode::GetProjectionMatrix	( OUT math::Matrix4* matrix ) const
+bool		CameraNode::GetProjectionMatrix	( OUT core::Matrix4* matrix ) const
 {
 	return false;
 }
-bool		CameraNode::GetWorldViewMatrix	( OUT math::Matrix4* matrix ) const
+bool		CameraNode::GetWorldViewMatrix	( OUT core::Matrix4* matrix ) const
 {
 	return false;
 }
 
 
 
-bool		CameraNode::LookAt			( math::Vector3& where )
+bool		CameraNode::LookAt			( core::Vector3& where )
 {
 	// add some stuff in here
 	return true;

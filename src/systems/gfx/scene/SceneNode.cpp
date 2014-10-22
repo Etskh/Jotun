@@ -5,12 +5,12 @@
 //
 // SceneNode.cpp
 //
-void	SceneNode::Transform		( const math::Matrix4* mat ) const
+void	SceneNode::Transform		( const core::Matrix4* mat ) const
 {
 	mat = &_transform;
 }
 
-void	SceneNode::Transform		( math::Matrix4* mat )
+void	SceneNode::Transform		( core::Matrix4* mat )
 {
 	mat =  &_transform;
 }
