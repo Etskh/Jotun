@@ -10,14 +10,13 @@ import fnmatch
 class JotunBuild:
 
 	libs = [
-		'stdc++',
-		'SDL2'
+		'stdc++'
 	]
 
 	def __init__(self, name):
 		self.name = name
 		self.env = Environment(CC='clang', CXX='clang', LINK='clang')
-		self.env.Append(CPPFLAGS=['-std=c++0x','-Werror','-Wall'])
+		self.env.Append(CPPFLAGS=['-std=c++0x','-Werror','-Wall','-ferror-limit=2'])
 		self.env.Append(CPPPATH=[ self.getSrcPath() ])
 		self.env.Append(LIBS=self.libs)
 		self.objs = []
@@ -47,7 +46,12 @@ class JotunBuild:
 			obj_filename = os.path.splitext(source)[0]
 			self.objs.append( self.env.Object(self.getTempPath() +
 				obj_filename, source=source) )
-
+		
+		if	( platform.system() == "Darwin"):
+			self.env.Append(LINKFLAGS='-framework SDL2 -F/Library/Frameworks/SDL2.framework/')
+		else:
+			self.libs.append('SDL2')
+			
 		self.env.Program( target=self.getBuildPath()+'jotun', source=self.objs)
 		
 
