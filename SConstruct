@@ -60,8 +60,8 @@ class DebugBuild(JotunBuild):
 class ProfileBuild(JotunBuild):
 	def __init__(self):
 		JotunBuild.__init__(self,'profile')
-		self.env.Append(CPPFLAGS=['-g'])
-		self.env.Append(CPPFLAGS=['-O3'])
+		self.env.Append(CPPFLAGS=['-g', '-O3'])
+		self.env.Append(CPPDEFINES=['DEBUG'])
 
 class ReleaseBuild(JotunBuild):
 	def __init__(self):

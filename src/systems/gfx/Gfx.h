@@ -8,14 +8,22 @@
 #include <string> // for std::string
 #include <vector> // for std::vector
 
+#include "core/Assert.h"
+#include "core/math/Vector.h"
+#include "core/math/Matrix.h"
+
+/*
 // BASE CORE LIB
 //
 #include <assert.h> // for assert
 #define ASSERT assert
 #define NOT_IMPLEMENTED false
-#define OUT 
+#define OUT
 typedef unsigned int uint;
 namespace math {
+	struct Vector2 {
+		float m[2];
+	};
 	struct Vector3 {
 		float m[3];
 	};
@@ -28,7 +36,7 @@ namespace core {
 		float d[4];
 	};
 } // namespace core
-
+*/
 
 
 
@@ -46,3 +54,5 @@ namespace core {
 #include "scene/StaticMeshNode.h"
 
 #include "scene/Scene.h"
+
+
