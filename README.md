@@ -1,4 +1,4 @@
-Jotun
+Jotun (0.0.x)
 =====
 
 A redux of a module-based framework that compiles on Linux ( tested on Ubuntu ), and MacOSX (tested on Mountain Lion), and probably Windows ( untested, but I'm a Windows programmer, so it's a good guess). Plans to support mobile aren't being developed, but isn't not on my mind.
