@@ -9,13 +9,17 @@ import fnmatch
 
 class JotunBuild:
 
+	libs = [
+		'stdc++',
+		'SDL2'
+	]
+
 	def __init__(self, name):
 		self.name = name
 		self.env = Environment(CC='clang', CXX='clang', LINK='clang')
 		self.env.Append(CPPFLAGS=['-std=c++0x','-Werror','-Wall'])
-		self.env.Append(LIBS=['stdc++'])
-		# SDL
-		# self.env.Append(LIBS=['SDL2'])
+		self.env.Append(CPPPATH=[ self.getSrcPath() ])
+		self.env.Append(LIBS=self.libs)
 		self.objs = []
 		
 	def getBuildPath(self):
