@@ -1,6 +1,7 @@
 #ifndef INCLUDED_MATRIX_H
 #define INCLUDED_MATRIX_H
 
+#include "core/Patterns.h"
 #include "Vector.h"
 
 namespace core {
