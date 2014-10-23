@@ -1,4 +1,4 @@
-Jotun (0.0.x)
+Jotun 0.0.x (Ymir)
 =====
 
 A redux of a module-based framework that compiles on Linux ( tested on Ubuntu ), and MacOSX (tested on Mountain Lion), and probably Windows ( untested, but I'm a Windows programmer, so it's a good guess). Plans to support mobile aren't being developed, but isn't not on my mind.
@@ -30,4 +30,7 @@ The GUI uses an attribute-based system that is even more loose than something th
 ##Core
 I've been working on this core library for some time. Most of the cooler stuff in there (like aligned, templatised strings) is hidden away basically without comments… but I hope to rectify that soon.
 
+
+##Naming
+The project is named after something that sounded cool, I'll be perfectly honest. The fact is frost giants are awesome, and vikings were totally wicked. The first incarnation is obviously named Ymir.
 
