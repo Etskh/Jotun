@@ -32,7 +32,7 @@ I've been working on this core library for some time. Most of the cooler stuff i
 
 
 ##Naming
-The project is named after something that sounded cool, I'll be perfectly honest. The fact is frost giants are awesome, and vikings were totally wicked. The first incarnation is obviously named Ymir. The following is a breakdown of the naming convention for versioning.
+The project is named after something that sounded cool, I'll be perfectly honest. The fact is frost giants are awesome, and most of this code was fueled by <a href="https://www.youtube.com/watch?v=bjRUee5S44w">Amon Amarth</a>. The first incarnation is obviously named <a href="http://en.wikipedia.org/wiki/Ymir">Ymir</a>. The following is a breakdown of the naming convention for versioning.
 
 **Major version**
  - Changes every-time there is a major restructure of code (adding or removing a system, or collapsing one system into others).
