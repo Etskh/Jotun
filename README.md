@@ -1,4 +1,4 @@
-Jotun 0.0.x (Ymir)
+Jotun 0.0.0-x (Ymir)
 =====
 
 A redux of a module-based framework that compiles on Linux ( tested on Ubuntu ), and MacOSX (tested on Mountain Lion), and probably Windows ( untested, but I'm a Windows programmer, so it's a good guess). Plans to support mobile aren't being developed, but isn't not on my mind.
@@ -33,4 +33,32 @@ I've been working on this core library for some time. Most of the cooler stuff i
 
 ##Naming
 The project is named after something that sounded cool, I'll be perfectly honest. The fact is frost giants are awesome, and vikings were totally wicked. The first incarnation is obviously named Ymir.
+
+Major version
+	- Changes every-time there is a major restructure of code (adding or removing a system, or collapsing one system into others).
+	- Major version releases can be named
+	- It stays low
+
+Minor version
+	- Changes every-time there is an API change. Developers will need to consider the implications of the upgrade, but usually don't need to do much
+	- It can climb pretty high
+	- Resets when the major version ticks up
+
+Release version
+	- Changes every time there is an implementation change of a release candidate that changes the inner-functionality
+	- This doesn't cover small changes like buffer-overflow corrections; small fixes that don't change a large portion of code are not considered to be "release" version upgrades
+	- Shouldn't affect the developers heavily
+	- Might reduce CPU, memory usage, or disk reads
+	- Could add support (invisibly) for other OS
+	- Could add support (invisibly) for other build systems
+	- It can climb super high
+	- Resets when the minor version ticks up
+
+Build version
+	- Changes every time there has been a commit into the suppository
+	- It effectively has no implications for the Developer
+	- Resets when the minor version goes up
+	- If the build version accumulates, it will not be released
+	- Lets the Developers know how much the product has changed
+		(if the project has good commits)
 
