@@ -60,7 +60,7 @@ class JotunBuild:
 		if( os.path.isfile( self.program_name )):
 			subprocess.call ([ './'+self.program_name ])
 		else:
-			print("Something went fucky")
+			print("Something went wrong.")
 				
 
 class DebugBuild(JotunBuild):
